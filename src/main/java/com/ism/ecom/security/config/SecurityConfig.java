@@ -40,7 +40,7 @@ public class SecurityConfig {
                         (requests) -> requests
                                 .requestMatchers(
                                         "/auth/add-user",
-                                        "/login" ,
+                                        "/api/login" ,
                                         "/swagger-ui/**",
                                         "/swagger-resources/**",
                                         "/api-docs/**").permitAll()
