@@ -1,4 +1,4 @@
-package com.ism.ecom.api.controllers.dto.request;
+package com.ism.ecom.web.dto.request;
 
 import com.ism.ecom.data.entities.Article;
 import lombok.*;

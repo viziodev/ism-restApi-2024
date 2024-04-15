@@ -11,7 +11,7 @@ import com.ism.ecom.data.repositories.CommandeRepository;
 import com.ism.ecom.data.repositories.LigneCommandeRepository;
 import com.ism.ecom.exceptions.EntityNotFoundException;
 import com.ism.ecom.services.CommandeService;
-import com.ism.ecom.api.controllers.dto.request.PanierDto;
+import com.ism.ecom.web.dto.request.PanierDto;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

@@ -1,7 +1,7 @@
 package com.ism.ecom.services;
 
 import com.ism.ecom.data.entities.Client;
-import com.ism.ecom.api.controllers.dto.request.ClientCreateRequestDto;
+import com.ism.ecom.web.dto.request.ClientCreateRequestDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

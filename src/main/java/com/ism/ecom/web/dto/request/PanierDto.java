@@ -1,6 +1,6 @@
-package com.ism.ecom.api.controllers.dto.request;
+package com.ism.ecom.web.dto.request;
 
-import com.ism.ecom.api.controllers.dto.response.ClientShowReponseDto;
+import com.ism.ecom.web.dto.response.ClientShowReponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

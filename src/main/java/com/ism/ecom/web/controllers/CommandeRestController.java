@@ -1,6 +1,6 @@
-package com.ism.ecom.api.controllers;
+package com.ism.ecom.web.controllers;
 
-import com.ism.ecom.api.controllers.dto.request.PanierDto;
+import com.ism.ecom.web.dto.request.PanierDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

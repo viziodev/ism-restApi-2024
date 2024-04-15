@@ -1,11 +1,11 @@
-package com.ism.ecom.api.controllers.impl;
+package com.ism.ecom.web.controllers.impl;
 
-import com.ism.ecom.api.controllers.ArticleRestController;
-import com.ism.ecom.api.controllers.dto.response.ArticleAllResponseDto;
-import com.ism.ecom.api.controllers.dto.RestResponse;
+import com.ism.ecom.web.controllers.ArticleRestController;
+import com.ism.ecom.web.dto.response.ArticleAllResponseDto;
+import com.ism.ecom.web.dto.RestResponse;
 import com.ism.ecom.data.entities.Article;
 import com.ism.ecom.services.ArticleService;
-import com.ism.ecom.api.controllers.dto.request.ArticlePanierDto;
+import com.ism.ecom.web.dto.request.ArticlePanierDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
