@@ -1,8 +1,7 @@
 package com.ism.ecom.security.controllers;
 
-import com.ism.ecom.web.dto.request.AuthenticationRequestDto;
+import com.ism.ecom.security.controllers.dtos.AuthenticationRequestDto;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 

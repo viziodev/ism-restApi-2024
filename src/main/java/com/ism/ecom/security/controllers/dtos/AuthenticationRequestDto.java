@@ -1,4 +1,4 @@
-package com.ism.ecom.web.dto.request;
+package com.ism.ecom.security.controllers.dtos;
 
 import lombok.*;
 
