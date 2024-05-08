@@ -18,7 +18,7 @@ public class ArticleAllResponseDto {
     private Boolean promo;
     private Integer qteStock;
     private String photo;
-
+    private CategorieResponseDto categorie;
     public static ArticleAllResponseDto toDto(Article article) {
         return  ArticleAllResponseDto
                 .builder()
@@ -29,8 +29,11 @@ public class ArticleAllResponseDto {
                 .photo(article.getPhoto())
                 .qteStock(article.getQteStock())
                 .promo(article.getPromo())
+                .categorie(CategorieResponseDto.toDto(article.getCategorie()))
                 .build();
 
     }
+
+
 
 }

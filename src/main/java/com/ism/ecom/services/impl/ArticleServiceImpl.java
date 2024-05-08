@@ -1,6 +1,7 @@
 package com.ism.ecom.services.impl;
 
 import com.ism.ecom.data.entities.Article;
+import com.ism.ecom.data.entities.Categorie;
 import com.ism.ecom.data.repositories.ArticleRepository;
 import com.ism.ecom.exceptions.EntityNotFoundException;
 import com.ism.ecom.services.ArticleService;
@@ -25,5 +26,9 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public Article getArticleByLibelle(String libelle) {
         return articleRepository.findArticleByLibelleAndActiveTrue(libelle);
+    }
+    @Override
+    public List<Article> getArticlesByCategorie(Categorie categorie) {
+        return articleRepository.findAllByCategorie(categorie);
     }
 }

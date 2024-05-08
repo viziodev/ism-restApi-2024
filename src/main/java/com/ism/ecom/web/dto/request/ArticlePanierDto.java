@@ -18,8 +18,6 @@ public class ArticlePanierDto {
     private Double quantite;
     private Double quantiteStock;
     private Double prix;
-
-
     public static ArticlePanierDto toDto(Article article) {
          return ArticlePanierDto
                  .builder()

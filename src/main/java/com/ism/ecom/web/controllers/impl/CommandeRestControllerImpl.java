@@ -29,7 +29,9 @@ public class CommandeRestControllerImpl implements CommandeRestController {
         Map<Object, Object>  model= RestResponse.paginateResponse(dataDto.getContent(),new int[dataDto.getTotalPages()],dataDto.getNumber(),dataDto.getTotalElements(),dataDto.getTotalPages(),HttpStatus.OK);
         return new ResponseEntity<>(model, HttpStatus.OK);
     }
-
+//page=5
+//pages =>new int[5]==>|0|0|0|0|0|
+//                      0 1 2 3  5
     @Override
     public ResponseEntity<Map<Object, Object>> listerAllCommandes(int page, int size) {
         Page<CommandeResponseDto> dataDto=getCommandeResponse(null,page,size);
@@ -46,7 +48,8 @@ public class CommandeRestControllerImpl implements CommandeRestController {
     }
 
     @Override
-    public ResponseEntity<Map<Object, Object>> saveCommande(PanierDto panier) {
+    public ResponseEntity<Map<Object, Object>> saveCommande(PanierDto panier) {       
+       
         commandeService.saveCommande(panier);
         return new ResponseEntity<>(RestResponse.response(null,HttpStatus.NO_CONTENT), HttpStatus.OK);
     }

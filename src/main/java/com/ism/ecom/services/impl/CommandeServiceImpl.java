@@ -44,7 +44,7 @@ public class CommandeServiceImpl implements CommandeService {
     public void saveCommande(PanierDto panierDto) {
         Client client = clientRepository.findById(panierDto.getClient().getId())
                 .orElseThrow(()->new EntityNotFoundException("Client n'existe pas"));
-
+             System.out.println("Ok");
             Commande commande = new Commande(
                    new Date(),
                    panierDto.getTotal(),

@@ -27,11 +27,11 @@ public class ArticleFixtures implements CommandLineRunner {
     public void run(String... args) throws Exception {
         List<Article> articleList=new ArrayList<Article>();
         for (int i = 1; i <= 5; i++) {
-            Categorie categorie = categorieRepository.findById(Long.valueOf(i)).get();
+            Categorie categorie = categorieRepository.findById(Long.valueOf(i)).orElse(null);
             for (int j = 0; j < 5; j++) {
                 Random random = new Random();
                 int randomNumber = random.nextInt(100) + j;
-                Article article = new Article(String.format("Article%d", randomNumber), 10000.0, 8000.0, false, i * j, "https://dummyimage.com/450x300/dee2e6/6c757d.jpg", null);
+                Article article = new Article(String.format("Article%d", randomNumber), 10000.0, 8000.0, false, i * j, "https://dummyimage.com/450x300/dee2e6/6c757d.jpg", null,categorie);
                 article.setActive(j%2==0);
                 articleList.add(article);
             }

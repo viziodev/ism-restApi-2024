@@ -2,6 +2,7 @@ package com.ism.ecom.data.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -27,5 +28,6 @@ public class Article extends  AbstractEntity {
     private String photo;
     @OneToMany(mappedBy ="article")
     private List<LigneCommande> ligneCommandes;
-
+    @ManyToOne()
+    Categorie categorie;
 }

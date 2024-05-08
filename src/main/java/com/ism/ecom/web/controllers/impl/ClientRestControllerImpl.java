@@ -25,7 +25,7 @@ import java.util.Map;
 @RequestMapping("/api")
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(value = "http://localhost:4200")
+@CrossOrigin(value = "*")
 public class ClientRestControllerImpl implements ClientRestController {
     private final ClientService clientService;
     @Override
@@ -50,6 +50,7 @@ public class ClientRestControllerImpl implements ClientRestController {
 
     @Override
     public ResponseEntity<Map<Object, Object>>  saveClient(ClientCreateRequestDto client,BindingResult bindingResult) {
+       
         Map<Object, Object> response;
         if (bindingResult.hasErrors()){
             Map<String, String> errors =new HashMap<>();

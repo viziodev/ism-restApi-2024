@@ -38,7 +38,11 @@ public class SecurityConfig {
        return  http.csrf(AbstractHttpConfigurer::disable)
                     // .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
                        .authorizeHttpRequests(auth-> auth
-                       .requestMatchers("/api/login","/api/articles").permitAll()
+                       .requestMatchers(
+                        "/api/login",
+                        "/api/**",
+                        "/api/articles/**",
+                        "/api/categories").permitAll()
                        .anyRequest().authenticated()
                      ).authenticationProvider(authenticationProvider())
                       .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
